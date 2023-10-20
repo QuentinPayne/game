@@ -1,0 +1,18 @@
+import random
+import string
+
+def generate_game_code(length):
+    letters_and_digits = string.ascii_letters + string.digits
+    return ''.join(random.choice(letters_and_digits) for _ in range(length))
+
+game_codes = []
+num_codes = 5
+code_length = 10
+
+for _ in range(num_codes):
+    game_code = generate_game_code(code_length)
+    game_codes.append(game_code)
+
+print("Generated game codes:")
+for code in game_codes:
+    print(code)
